@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #448a50;
+  background-color: grey;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,6 +17,12 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: 'Lato', sans-serif;
+}
+
+.deck {
+  background-color: #2d9e1e;
+  border: 1px solid black;
+  padding: 20px;
 }
 
 .container {
@@ -45,7 +51,7 @@ h4 {
 }
 
 .inc-exp-container {
-  background-color: #fff;
+  background-color: rgb(190, 134, 134);
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
@@ -118,7 +124,7 @@ input[type='number'] {
 .list li {
   background-color: #fff;
   box-shadow: var(--box-shadow);
-  color: #333;
+  color: rgb(7, 0, 0);
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -138,7 +144,7 @@ input[type='number'] {
   cursor: pointer;
   background-color: #e74c3c;
   border: 0;
-  color: #fff;
+  color: black;
   font-size: 20px;
   line-height: 20px;
   padding: 2px 5px;
