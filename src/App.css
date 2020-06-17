@@ -22,7 +22,7 @@ body {
 .deck {
   background-color: #2d9e1e;
   border: 1px solid black;
-  padding: 20px;
+  padding: 30px;
 }
 
 .container {
@@ -118,7 +118,7 @@ input[type='number'] {
 .list {
   list-style-type: none;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .list li {
@@ -128,7 +128,7 @@ input[type='number'] {
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: 10px;
+  padding: 5px;
   margin: 10px 0;
 }
 
@@ -136,8 +136,16 @@ input[type='number'] {
   border-right: 5px solid #2ecc71;
 }
 
+.list li.plus:hover {
+  background-color: #2ecc71;
+}
+
 .list li.minus {
   border-right: 5px solid #c0392b;
+}
+
+.list li.minus:hover {
+  background-color: #c0392b;
 }
 
 .delete-btn {
