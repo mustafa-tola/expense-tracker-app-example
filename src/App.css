@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: grey;
+   background-color:  #cfcfcf;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +20,7 @@ body {
 }
 
 .deck {
-  background-color: #2d9e1e;
+  background-color: #8cfff2;
   border: 1px solid black;
   padding: 30px;
 }
@@ -28,6 +28,7 @@ body {
 .container {
   margin: 30px auto;
   width: 350px;
+  
 }
 
 h1 {
@@ -36,7 +37,9 @@ h1 {
 }
 
 h2 {
-  color: rgba(47, 33, 247, 0.466)
+  color: grey;
+  text-align: center;
+  font-size: 30px;
 }
 
 h3 {
@@ -51,7 +54,7 @@ h4 {
 }
 
 .inc-exp-container {
-  background-color: rgb(190, 134, 134);
+  background-color: #cfcfcf;
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
@@ -75,7 +78,7 @@ h4 {
 }
 
 .money.plus {
-  color: #2ecc71;
+  color: #46b330;
 }
 
 .money.minus {
@@ -99,9 +102,9 @@ input[type='number'] {
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: #cfcfcf;
   box-shadow: var(--box-shadow);
-  color: #fff;
+  color: black;
   border: 0;
   display: block;
   font-size: 16px;
