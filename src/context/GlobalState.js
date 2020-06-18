@@ -3,7 +3,9 @@ import ExpenseReducer from "./AppReducer"
 
 const initialTransactions = {
     transactions: [],
-    transaction: {}
+    added: false,
+    edited: false,
+    id: ""
 }
 
 export const GlobalContext = createContext(initialTransactions);
@@ -24,14 +26,33 @@ export const GlobalProvider = ({ children }) => {
         })
     }
 
+    function editTransaction(id) {
+        dispatch({
+            type: "EDIT_TRANS",
+            id: id
+        })
+    }
+
+    function afterEdit() {
+        dispatch({
+            type: "AFTER_EDIT",
+        })
+    }
+
+    
+
+
+
     return (
-        <GlobalContext.Provider value={{ 
+        <GlobalContext.Provider value={{
             transactions: state.transactions,
-            toEdit: state.toEdit,
             deleteTransaction,
             addTrans,
-            filteredTransaction: state.transaction,
-
+            added: state.added,
+            editTransaction,
+            edited: state.edited,
+            id: state.id,
+            afterEdit
         }
         } >
             {children}

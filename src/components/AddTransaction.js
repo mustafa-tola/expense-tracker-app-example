@@ -3,8 +3,8 @@ import { GlobalContext } from "../context/GlobalState"
 
 export const AddTransaction = () => {
     const [textDesc, setText] = useState('');
-    const [changeableAmount, setAmount] = useState(0);
-    const { addTrans } = useContext(GlobalContext);
+    const [changeableAmount, setAmount] = useState('');
+    const { addTrans,added} = useContext(GlobalContext);
     const onSubmit = e => {
         e.preventDefault();
 
@@ -13,6 +13,9 @@ export const AddTransaction = () => {
             textDesc: textDesc,
             changeableAmount: +changeableAmount,
         }
+
+        setText('');
+        setAmount('');
         addTrans(newTrans);
     }
 
