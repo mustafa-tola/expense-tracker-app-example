@@ -2,12 +2,8 @@ import React, { createContext, useReducer } from 'react';
 import ExpenseReducer from "./AppReducer"
 
 const initialTransactions = {
-    transactions: [
-        { id: 1, textDesc: "Project 1 Income", changeableAmount: 1000 },
-        { id: 2, textDesc: "Project 1 Expense", changeableAmount: -100 },
-        { id: 3, textDesc: "Project 2 Income", changeableAmount: 2000 },
-        { id: 4, textDesc: "Project 2 Expense", changeableAmount: -500 }
-    ]
+    transactions: [],
+    transaction: {}
 }
 
 export const GlobalContext = createContext(initialTransactions);
@@ -21,10 +17,21 @@ export const GlobalProvider = ({ children }) => {
         })
     }
 
+    function addTrans(transaction) {
+        dispatch({
+            type: "ADD_TRANS",
+            payload: transaction,
+        })
+    }
+
     return (
         <GlobalContext.Provider value={{ 
             transactions: state.transactions,
-            deleteTransaction: deleteTransaction 
+            toEdit: state.toEdit,
+            deleteTransaction,
+            addTrans,
+            filteredTransaction: state.transaction,
+
         }
         } >
             {children}
