@@ -4,14 +4,6 @@ import { GlobalContext } from "../context/GlobalState"
 export const Transaction = ({ transaction }) => {
     const { deleteTransaction, id,  } = useContext(GlobalContext)
     const sign = transaction.changeableAmount < 0 ? "-" : "+";
-    const editStyle = {};
-    const viewStyle = {};
-    const none = {}
-    if (edited) {
-        viewStyle.display = 'none';
-    } else {
-        editStyle.display = "none";
-    }
 
     return (
         <>
