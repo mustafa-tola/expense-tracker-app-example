@@ -13,17 +13,6 @@ export default (state, action) => {
                 added: true,
                 edited: false,
             }
-        case "EDIT_TRANS":
-            return {
-                ...state,
-                id: action.id,
-                edited: true,
-            }
-        case "AFTER_EDIT":
-            return {
-                ...state,
-                edited: false,
-            }
         default:
             return state;
     }
