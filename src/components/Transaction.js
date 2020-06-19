@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { GlobalContext } from "../context/GlobalState"
 
 export const Transaction = ({ transaction }) => {
-    const { deleteTransaction, id,  } = useContext(GlobalContext)
+    const { deleteTransaction } = useContext(GlobalContext)
     const sign = transaction.changeableAmount < 0 ? "-" : "+";
 
     return (
